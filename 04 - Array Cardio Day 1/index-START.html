@@ -148,7 +148,23 @@
         obj[item]++;
         return obj;
       }, {});
-      console.log(transportation);
+      //console.log(transportation);
+
+      //Use Array.prototype.find() to find the first inventor born after 1800.
+      const first = inventors.find(({ year }) => year > 1800);
+      //console.log(first);
+
+      //Use Array.prototype.some() to check if any inventor lived more than 100 years.
+      const isLived = inventors.some(({ year, passed }) => passed - year > 100);
+      // console.log(isLived);
+
+      const uppersName = people.map((person) => {
+        const [firstName, lastName] = person.split(",");
+        return lastName.toUpperCase();
+      });
+
+      // console.log(uppersName);
+      console.log(people.includes("Beethoven, Ludwig"));
     </script>
   </body>
 </html>
