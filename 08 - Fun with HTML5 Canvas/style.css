@@ -1,0 +1,40 @@
+html,
+body {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.settings {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  transform: translateX(-50%);
+  gap: 5px;
+}
+
+.icons svg {
+  transition: 0.1s;
+  border-radius: 5px;
+  padding: 2px;
+  border: 1px solid #000;
+}
+
+.icons svg rect,
+path {
+  stroke: #fff;
+}
+
+.icons svg:hover {
+  border: 1px solid #646464;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #375cad;
+  cursor: pointer;
+}

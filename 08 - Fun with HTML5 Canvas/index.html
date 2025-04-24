@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Canvas</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="settings">
+      <div class="icons">
+        <svg
+          id="mouse"
+          data-shape="mouse"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13 13L20 10L5 5L10 20L13 13ZM13 13L19 19"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <svg
+          id="square"
+          data-shape="square"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="4"
+            y="4"
+            width="16"
+            height="16"
+            stroke="black"
+            stroke-width="2"
+            fill="none"
+          />
+        </svg>
+        <svg
+          id="line"
+          data-shape="line"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#000000"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path d="M23 13H2v-2h21v2z" />
+        </svg>
+
+        <svg
+          id="reset"
+          fill="#000000"
+          width="24px"
+          height="24px"
+          viewBox="-1.5 -2.5 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMinYMin"
+        >
+          <path
+            d="M12.728 12.728L8.485 8.485l-5.657 5.657 2.122 2.121a3 3 0 0 0 4.242 0l3.536-3.535zM11.284 17H14a1 1 0 0 1 0 2H3a1 1 0 0 1-.133-1.991l-1.453-1.453a2 2 0 0 1 0-2.828L12.728 1.414a2 2 0 0 1 2.828 0L19.8 5.657a2 2 0 0 1 0 2.828L11.284 17z"
+          />
+        </svg>
+      </div>
+    </div>
+    <canvas id="draw" width="800" height="800"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- <label for="shapes">Shapes</label>
+<select name="shapes" class="shapes">
+  <option value="rectangle" selected>Rectangle</option>
+  <option value="line">Line</option>
+</select> -->

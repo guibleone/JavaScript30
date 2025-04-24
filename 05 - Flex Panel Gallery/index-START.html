@@ -86,12 +86,15 @@
       .panel > *:first-child {
         transform: translateY(-100%);
       }
+
       .panel.open-active > *:first-child {
         transform: translateY(0);
       }
+
       .panel > *:last-child {
         transform: translateY(100%);
       }
+
       .panel.open-active > *:last-child {
         transform: translateY(0);
       }
@@ -142,20 +145,21 @@
     </div>
 
     <script>
-      function togglePanel() {
+      const panels = document.querySelectorAll(".panel");
+      panels.forEach((panel) => panel.addEventListener("click", toggleOpen));
+      panels.forEach((panel) =>
+        panel.addEventListener("transitionend", toggleActive)
+      );
+
+      function toggleOpen() {
         this.classList.toggle("open");
       }
 
-      function toggleWords(e) {
-        if (e.propertyName.includes("flex"))
+      function toggleActive(e) {
+        if (e.propertyName.includes("flex")) {
           this.classList.toggle("open-active");
+        }
       }
-
-      const panels = document.querySelectorAll(".panel");
-      panels.forEach((panel) => panel.addEventListener("click", togglePanel));
-      panels.forEach((panel) =>
-        panel.addEventListener("transitionend", toggleWords)
-      );
     </script>
   </body>
 </html>
